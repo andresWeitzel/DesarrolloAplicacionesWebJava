@@ -52,5 +52,13 @@ https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.25
 </dependency>
 
 
+-------------------
+--GIT CONSOLE------
+-------------------
+
+1)Seleccionar el proyecto
+
+2)clickDerecho->show in local terminal->git bash
+
 
 
