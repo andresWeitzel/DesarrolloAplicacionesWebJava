@@ -15,59 +15,122 @@
 
 <hr>
 
-## Unirse como colaborador al proyecto
+| **Tecnologías** | **Versión** | **Finalidad** |               
+| ------------- | ------------- | ------------- |
+| Java |   12.0.2 | JDK |
+| Eclipse IDE |  4.20 | Entorno de Desarrollo Integrado |
+| Cygwin | 3.1.6-1  | Colección de Herramientas / Terminal en Windows integrada al IDE Eclipse |
+| Git | 2.29.1.windows.1  | Control de Versiones |
+| XAMPP | 3.2.2  | Paquete de Servidores |
+| DBeaver | 21.1  | Diseño de Base de Datos | 
 
-##### 1)Generamos un fork del proyecto Original..
-* https://github.com/andresWeitzel/DesarrolloAplicacionesWebJava
+</br>
 
-##### 2)Descargas o clonas tu fork
-* git clone "Link de tu Repositorio sin comillas"
+| **Dependencia Maven** | **Finalidad** |               
+| ------------- | ------------- |
+| mysql-connector 8.0.25|  Conexion e implementación de queries a la db con mysql |
+| Java Servlet Api 4.0.1|  Conexion y configuración de los Servlets |
 
-##### 3)Inicializamos nuestro repositorio local .git
+* Repositorio dependencia Java Servlet Api: https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api/4.0.1
+
+* Repositorio dependencia mysql-connector: https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.25
+
+
+
+</br>
+
+ ## Patrones de Diseño
+ * **Singleton** 
+ * **Dao** 
+ 
+ ## Java8
+* **Streams**
+* **Lambdas**
+* **Filters**
+* **Collections**
+* **Etc..**
+
+</br>
+
+## Descarga y documentacion de las Tecnologías empleadas:
+#### Java-JDK 12:                     https://www.oracle.com/java/technologies/javase/jdk12-archive-downloads.html
+#### Maven Repositories:              https://mvnrepository.com/
+#### Eclipse:                        https://www.eclipse.org/
+#### Cygwin:                           https://cygwin.com/install.html
+#### Git:                              https://git-scm.com/docs
+#### XAMPP:                            https://www.apachefriends.org/download.html
+#### DBeaver:                         https://dbeaver.io/
+
+
+</br>
+
+<hr>
+
+## Más Información
+
+## Creación de Proyecto Maven en Eclipse
+
+#### 1) Vas a la pestaña File->New->Maven Proyect
+#### 2) Dentro de Maven Proyect, Seteamos el WorkSpace...
+#### 3) Dentro de Maven Proyect, Seteamos el Archetype, en catalogs-> all catalogs, en filter->Escribimos webApp y seleccionamos ORG.APACHE.MAVEN.ARCHETYPES
+#### 4) Dentro de Maven Proyect, Escribimos en GroupId-> com.jee.maven, en Artifact Id->'nombre de nuestro proyecto sin comillas'
+#### 5) Agregamos las dependencias necesarias dentro del pom.xml
+#### 6) Dentro del pom.xml cambiamos la versión de Java de 1.7 a 1.8 en <maven.compiler.source> y <maven.compiler.target>
+#### 7) Configuramos el build path, clickDerecho sobre el proyecto->Build Path->Configure Build path->SELECCIONAMOS  MAVEN DEPENDENCIES->Apply and Close
+
+</br>
+
+## Uso de Cygwin
+
+#### 1)Descargar la herramienta en https://cygwin.com/install.html dependiendo la arquitectura que se tenga (32-64 bits), como toda aplicacion siguiente.... siguiente....```(IMPORTANTE:NO TENER ABIERTO EL IDE DURANTE LA INSTALACION, SINO NO RECONOCE EL PATH)```
+#### 2)Abrir Eclipse IDE, seguidamente seleccionar el proyecto para implementar git, ir a la pestaña y clickear ```Tools->Open in terminal```
+#### 3)Te debería aparecer algo parecido a esto(Ruta Absoluta de tu proyecto)...
+```andre@DESKTOP-7BN69K1/cygdrive/c/Users/andre/OneDrive/Escritorio/LenguajesProgramacion/JAVASE/Proyectos/GestorGastos_app```
+#### 4)Crear un nuevo repositorio y comenzar con git
+```Debajo de esta sección, explico como usar git de forma detallada.```
+#### 5) Más Información https://ourcodeworld.com/articles/read/680/how-to-configure-an-integrated-terminal-command-prompt-in-netbeans-for-windows
+
+</br>
+
+## Subir el proyecto al repositorio con la terminal a traves de Cygwin en Eclipse
+
+#### 1)Creamos un nuevo repositorio en GitHub.
+
+#### 2)Inicializamos nuestro repositorio local .git desde la terminal.
 * git init
 
- `Tu Repositorio Remoto tiene un commit que tu local no tiene, y viceversa. No hay un ancestro común y por lo tanto no se puede hacer merge.Si el código del remoto es ligeramente parecido a tu código local y efectivamente quieres hacer un merge, la solución sería:... `
-
-##### 4)Descargamos todas las referencias y objetos de nuestro fork
-* git fetch --all
-
-##### 5)No tocamos el archivo de índice o el árbol de trabajo en absoluto (pero restablecemos la cabeza a , al igual que todos los modos). Esto deja todos los archivos modificados "Cambios a confirmar", como diría.
-* git reset --soft origin/master
-
-##### 6)Agregamos lo desarrollado a nuestro repo local
-* git add --all
-
-##### 7)Agregamos lo que tenemos en nuestro repo local al área de Trabajo.(Comit encima del primer commit remoto)
-* git commit -m "agrega un comentario entre comillas"
-
-##### 8)Le indicamos a git donde se va a almacenar nuestro proyecto(fijate en tu repositorio de github cual es el enlace de tu proyecto(esta en code)).
-* git remote add origin "Link de tu Repositorio sin comillas"
-
-##### 9)Subimos nuestro proyecto.
-* git push origin master
-
-
-#####  `Si se quiere realizar una restructuracion del proyecto desde tu FORK y pisar todo lo que hay...`
-* git push -f --set-upstream origin master
-* (OJO, CON ESTO SE PIERDE TODO LO QUE HABIA)
-
-</br>
-
-
-### Actualización del repositorio del fork de cada desarrollador con git desde el bash 
-
-##### 1)Visualizamos las modificaciones realizadas en local
-* git status
-
-##### 2)Agregamos lo modificado al area de trabajo
+#### 3)Agregamos lo desarrollado a nuestro repo local desde la terminal.
 * git add *
 
-##### 3)Confirmamos las modificaciones realizadas
-* git commit -m "tu commit entre comillas"
+#### 4)Agregamos lo que tenemos en nuestro repo local al área de Trabajo desde la terminal.
+* git commit -m "agrega un comentario entre comillas"
 
-##### 5)Enviamos todos los cambios al repo en github
-* git push "Link de tu Repositorio sin comillas"
+#### 5)Le indicamos a git donde se va a almacenar nuestro proyecto(fijate en tu repositorio de github cual es el enlace de tu proyecto(esta en code)).
+* git remote add origin https://github.com/andresWeitzel/DesarrolloAplicacionesWebJava
+
+#### 6)Subimos nuestro proyecto.
+* git push -u origin master
+
 
 </br>
+
+
+## Actualización de el proyecto al repositorio con la terminal a traves de Cygwin en Netbeans
+
+#### 1)Visualizamos las modificaciones realizadas en local
+* git status
+
+#### 2)Agregamos lo modificado al area de trabajo
+* git add *
+
+#### 3)Confirmamos las modificaciones realizadas
+* git commit -m "tu commit entre comillas"
+
+#### 4)Sincronizamos y traemos todos los cambios del repositorio remoto a la rama en la que estemos trabajando actualmente.
+##### (SOLO SI SE REALIZARON CAMBIOS DESDE OTRA LADO, ej: en github u/o/y un equipo de trabajo)
+* git pull https://github.com/andresWeitzel/DesarrolloAplicacionesWebJava
+
+#### 5)Enviamos todos los cambios locales al repo en github
+* git push https://github.com/andresWeitzel/DesarrolloAplicacionesWebJava
 
 </br>
