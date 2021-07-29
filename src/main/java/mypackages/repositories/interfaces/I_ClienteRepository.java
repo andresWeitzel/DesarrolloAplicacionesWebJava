@@ -75,6 +75,26 @@ public interface I_ClienteRepository {
 		
 	}
 	
+	//====== GET BY EDAD MAYOR QUE===========
+
+	default List<Cliente> getByEdadMayorQue(int edad){
+		
+		return getStream()
+				.filter(objeto ->objeto.getEdad() > edad)
+				.collect(Collectors.toList());
+		
+	}
+	
+	//====== GET BY EDAD MENOR QUE===========
+
+		default List<Cliente> getByEdadMenorQue(int edad){
+			
+			return getStream()
+					.filter(objeto ->objeto.getEdad() < edad)
+					.collect(Collectors.toList());
+			
+		}
+	
 	//====== GET LIKE DIRECCION ===========
 
 	default List<Cliente> getLikeDireccion(String direccion){
