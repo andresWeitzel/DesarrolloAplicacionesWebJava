@@ -82,6 +82,28 @@
 #### 6) Dentro del pom.xml cambiamos la versión de Java de 1.7 a 1.8 en <maven.compiler.source> y <maven.compiler.target>
 #### 7) Configuramos el build path, clickDerecho sobre el proyecto->Build Path->Configure Build path->SELECCIONAMOS  MAVEN DEPENDENCIES->Apply and Close
 
+
+</br>
+
+## Consideraciones Personales y Posibles Errores dentro de Eclipse
+
+### Servlets 
+
+#### 1) Si se crea un proyecto Maven y no un Dinamic Web Proyect, cuando se mueve los servlets de paquete en paquete no 
+#### se actualiza el web.xml, en donde esta la información de despliegue de los servlets, empiezan los errores, hay que configurar
+#### de forma manual el servlet y el servlet-mapping dentro de web.xml ( si conoces otro metodo, informar).
+
+</br>
+
+#### 2)Caso hipotetico de caer en el inciso anterior, luego de las configuraciones manuales(PARA CADA UNO DE LOS SERVLETS), borrar 
+#### configuraciones y servidor, crear nuevo, asignar configuraciones y volver a correr el proyecto, probar cada servlet.
+
+</br>
+
+#### 3)Si el paso anteriror no funciona, reinicar el IDE o probar actualizar el proyecto, clean, build, etc.
+
+
+
 </br>
 
 ## Uso de Cygwin
@@ -138,27 +160,4 @@
 * git push https://github.com/andresWeitzel/DesarrolloAplicacionesWebJava
 
 </br>
-
-</br>
-
-<hr>
-
-## Consideraciones Personales y Posibles Errores dentro de Eclipse
-
-### Servlets 
-
-#### 1) Si se crea un proyecto Maven y no un Dinamic Web Proyect, cuando se mueve los servlets de paquete en paquete no 
-#### se actualiza el web.xml, en donde esta la información de despliegue de los servlets, empiezan los errores, hay que configurar
-#### de forma manual el servlet y el servlet-mapping dentro de web.xml ( si conoces otro metodo, informar).
-
-
-</br>
-
-#### 2)Caso hipotetico de caer en el inciso anterior, luego de las configuraciones manuales(PARA CADA UNO DE LOS SERVLETS), borrar 
-#### configuraciones y servidor, crear nuevo, asignar configuraciones y volver a correr el proyecto, probar cada servlet.
-
-
-</br>
-
-#### 3)Si el paso anteriror no funciona, reinicar el IDE o probar actualizar el proyecto, clean, build, etc.
 
