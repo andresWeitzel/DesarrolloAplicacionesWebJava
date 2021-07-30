@@ -4,14 +4,42 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
   <servlet>
   	<servlet-name>ClienteAlta</servlet-name>
   	<display-name>ClienteAlta</display-name>
   	<description></description>
-  	<servlet-class>mypackages.services.ClienteAlta</servlet-class>
+  	<servlet-class>mypackages.services.servlets.ClienteAlta</servlet-class>
   </servlet>
+  
+  <servlet>
+  	<servlet-name>ClienteBaja</servlet-name>
+  	<display-name>ClienteBaja</display-name>
+  	<description></description>
+  	<servlet-class>mypackages.services.servlets.ClienteBaja</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>ClienteInformacion</servlet-name>
+  	<display-name>ClienteInformacion</display-name>
+  	<description></description>
+  	<servlet-class>mypackages.services.servlets.ClienteInformacion</servlet-class>
+  </servlet>
+  
+  
   <servlet-mapping>
   	<servlet-name>ClienteAlta</servlet-name>
   	<url-pattern>/ClienteAlta</url-pattern>
   </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>ClienteBaja</servlet-name>
+  	<url-pattern>/ClienteBaja</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>ClienteInformacion</servlet-name>
+  	<url-pattern>/ClienteInformacion</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
