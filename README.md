@@ -30,10 +30,14 @@
 | ------------- | ------------- |
 | mysql-connector 8.0.25|  Conexion e implementación de queries a la db con mysql |
 | Java Servlet Api 4.0.1|  Conexion y configuración de los Servlets |
+| Json Libraries 2.8.7|  Manejo de Objetos en Formato Json  |
 
-* Repositorio dependencia Java Servlet Api: https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api/4.0.1
+* Repositorio dependencia Java Servlet Api : https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api/4.0.1
 
-* Repositorio dependencia mysql-connector: https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.25
+* Repositorio dependencia mysql-connector : https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.25
+
+* Repositorio dependencia Json Libraries : https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.7
+
 
 
 
@@ -134,3 +138,21 @@
 * git push https://github.com/andresWeitzel/DesarrolloAplicacionesWebJava
 
 </br>
+
+</br>
+
+<hr>
+
+## Consideraciones Personales y Posibles Errores dentro de Eclipse
+
+### Servlets 
+
+#### 1) Si se crea un proyecto Maven y no un Dinamic Web Proyect, cuando se mueve los servlets de paquete en paquete no 
+se actualiza el web.xml, en donde esta la información de despliegue de los servlets, empiezan los errores, hay que configurar
+de forma manual el servlet y el servlet-mapping dentro de web.xml ( si conoces otro metodo, informar).
+
+#### 2)Caso hipotetico de caer en el inciso anterior, luego de las configuraciones manuales(PARA CADA UNO DE LOS SERVLETS), borrar 
+configuraciones y servidor, crear nuevo, asignar configuraciones y volver a correr el proyecto, probar cada servlet.
+
+#### 3)Si el paso anteriror no funciona, reinicar el IDE o probar actualizar el proyecto, clean, build, etc.
+
