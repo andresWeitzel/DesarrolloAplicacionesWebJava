@@ -151,8 +151,14 @@
 #### se actualiza el web.xml, en donde esta la información de despliegue de los servlets, empiezan los errores, hay que configurar
 #### de forma manual el servlet y el servlet-mapping dentro de web.xml ( si conoces otro metodo, informar).
 
+
+</br>
+
 #### 2)Caso hipotetico de caer en el inciso anterior, luego de las configuraciones manuales(PARA CADA UNO DE LOS SERVLETS), borrar 
 #### configuraciones y servidor, crear nuevo, asignar configuraciones y volver a correr el proyecto, probar cada servlet.
+
+
+</br>
 
 #### 3)Si el paso anteriror no funciona, reinicar el IDE o probar actualizar el proyecto, clean, build, etc.
 
